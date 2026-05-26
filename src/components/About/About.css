@@ -101,8 +101,51 @@
 @media (max-width: 900px) {
   .about-wrap {
     grid-template-columns: 1fr;
+    gap: 48px;
   }
   .about-media {
     order: -1;
+  }
+  .about-img-main {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .about-badge {
+    width: 100px;
+    height: 100px;
+    bottom: -12px;
+    right: -12px;
+  }
+  .about-badge-text {
+    font-size: 24px;
+  }
+  .about-badge-sub {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-badge {
+    bottom: -8px;
+    right: -8px;
+    width: 80px;
+    height: 80px;
+  }
+  .about-badge-text {
+    font-size: 18px;
+  }
+  .about-badge-sub {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+  .about-feat {
+    padding: 16px;
   }
 }
