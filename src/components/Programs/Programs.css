@@ -120,3 +120,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .prog-card {
+    padding: 32px 24px;
+  }
+  .prog-card h3 {
+    font-size: 28px;
+  }
+  .prog-number {
+    font-size: 64px;
+    top: 14px;
+    right: 18px;
+  }
+}

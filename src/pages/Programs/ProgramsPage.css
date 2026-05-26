@@ -229,3 +229,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .pricing-card {
+    padding: 36px 24px;
+  }
+  .pricing-price {
+    font-size: 44px;
+  }
+  .popular-badge {
+    top: 18px;
+    right: -36px;
+    font-size: 8px;
+    padding: 4px 32px;
+  }
+  .page-banner {
+    padding: 130px 4% 60px;
+  }
+}

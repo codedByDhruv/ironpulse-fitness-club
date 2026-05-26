@@ -37,7 +37,7 @@
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(72px, 9vw, 130px);
+  font-size: clamp(44px, 8vw, 120px);
   line-height: 0.9;
   letter-spacing: 2px;
   margin-bottom: 36px;
@@ -169,6 +169,26 @@
 
 @media (max-width: 480px) {
   .hero-left {
-    padding: 130px 5% 60px;
+    padding: 110px 5% 40px;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .hero-eyebrow::before {
+    width: 20px;
+  }
+  .hero-number-strip {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-num strong {
+    font-size: 32px;
+  }
+  .hero-num span {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 }
