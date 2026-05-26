@@ -1,0 +1,231 @@
+/* Banner */
+.page-banner {
+  padding: 180px 8% 80px;
+  background: linear-gradient(to bottom, rgba(232,255,0,0.05) 0%, transparent 100%), var(--surface);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.banner-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.page-banner h1 {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 90px);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+.page-banner h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.pricing-card.popular {
+  border-color: var(--accent);
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(232,255,0,0.02) 100%);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 24px;
+  right: -32px;
+  background: var(--accent);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 36px;
+  transform: rotate(45deg);
+}
+
+.pricing-card h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.pricing-price {
+  font-family: var(--font-display);
+  font-size: 56px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pricing-price span {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--muted2);
+  letter-spacing: 0.5px;
+}
+
+.pricing-desc {
+  color: var(--muted2);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 300;
+}
+
+.pricing-features li i {
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.pricing-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.pricing-card.popular .pricing-btn {
+  background: var(--accent);
+  color: #000;
+}
+
+.pricing-card.popular .pricing-btn:hover {
+  background: var(--white);
+}
+
+.pricing-card:not(.popular) .pricing-btn {
+  border: 1px solid var(--border-hover);
+  color: var(--white);
+}
+
+.pricing-card:not(.popular) .pricing-btn:hover {
+  background: var(--white);
+  color: #000;
+  border-color: var(--white);
+}
+
+/* Timetable Section */
+.schedule-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 50px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 800px;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.schedule-table th {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(255,255,255,0.01);
+}
+
+.schedule-table td {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.schedule-table tr {
+  transition: background 0.3s;
+}
+
+.schedule-table tr:hover:not(:first-child) {
+  background: rgba(255,255,255,0.02);
+}
+
+.class-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(232,255,0,0.1);
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,96 @@
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.trainer-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.trainer-card img {
+  height: 420px;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.6s ease;
+}
+
+.trainer-card:hover img {
+  transform: scale(1.06);
+}
+
+.trainer-info {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 28px;
+  background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, transparent 100%);
+}
+
+.trainer-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.trainer-name {
+  font-family: var(--font-display);
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.trainer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+}
+
+.trainer-card:hover .trainer-socials {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trainer-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--white);
+  transition: background 0.3s;
+}
+
+.trainer-socials a:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* RESPONSIVE TRAINER OVERRIDES */
+@media (max-width: 1100px) {
+  .trainers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+}
